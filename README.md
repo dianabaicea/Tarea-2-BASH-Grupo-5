@@ -60,13 +60,14 @@ In this project, we developed an automated process that analyzes a chosen number
 In the next section, all the input data is explained 
 
 The results obtained are a _list of target genes that could be regulated by TFs or EMs, GO and KEGG metabolic pathways enrichment and DNA motifs in the TSS region where the transcription factor is bound_.
-
+  <br />
+  <br />
+  <br />
 
 
 ## 2 - Input
 ### Parameters
-
-The _params.txt_ file is the only one that the user needs to edit according to their data to run the entire analysis. An example of the <a href="URL_del_enlace">_params.txt_</a> file can be found in this repository. In the following section, these parameters are explained to better comprehend its correct specification:
+The _params.txt_ file is the only one that the user needs to edit according to their data to run the entire analysis. An example of the <a href="URL_del_enlace">_params.txt_</a> file can be found in this repository. In the following section, these parameters are explained to better comprehend its correct use:
 
 * `path_input_i:` The path to access the location where the input file/s is/are located. Must be written as many paths as input samples the study has (i=1,2,3...).
 * `path_chip_i:` The path to access the location where the chip file/s is/are located. Must be written as many paths as chip samples the study has (i=1,2,3...).
@@ -79,13 +80,27 @@ The _params.txt_ file is the only one that the user needs to edit according to t
 * `number_input:` The number of input samples the study has.
 * `tf_em:` The type of data used in the analysis. Use “tf” in case of transcription factor or “em” if it is epigenetics marks.
 
-
+  <br />
+> [!WARNING]
+> * The analysis only accepts compressed sample files (fq.gz extension file). 
+> * It is neccesary to write a space bar after each ":" in the _params.txt_ file.
+  <br />
 
 ### Scripts
+The processes carried out by each script are explained in the following section:
 
-A detailed summary of the steps followed by each script will be described:
+ * **`pipe.sh`**
+   - Load parameters from the _params.txt_ file.
+   - Create the workspace that contains all the input files and where the output would be located.
+   - Create the genome index using [bowtie2-build](http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml)
+
+ * **`experiment_name/annotation`:**
+   - Reference Annotation (`/annotation.gtf`) 
 
 
 
 
+OUTPUT
+Once all parameters have been specified, the next step is to run the scripts. When CHIPsequeando pipeline is running, the next folders will be created in the output directory:
+PARA EJECUTAR TODO EL SCRIPT SE INTRODUCE EL COMANDO
 
