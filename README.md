@@ -66,23 +66,26 @@ The results obtained are a _list of target genes that could be regulated by TFs 
 ## 2 - Input
 ### Parameters
 
-An example of the model file params_file.txt is found ChIPing/my_test/params_file.txt
-The params file should contain the following parameters:
-To process ChIP-Seq data run the executable chip_data_process.sh with param_input as unique input. On the folder: param_input you can find the file param_input.txt where it is neccesary to write this parameters:
+The _params.txt_ file is the only one that the user needs to edit according to their data to run the entire analysis. An example of the <a href="URL_del_enlace">_params.txt_</a> file can be found in this repository. In the following section, these parameters are explained to better comprehend its correct specification:
 
-The _params.txt_ file is the only one that the user needs to edit according to their data to run the entire analysis. An example of the <a href="URL_del_enlace">_params.txt_</a> file can be found in this repository. In the following section, these parameters are explained to better comprehend its use:
-
-* `path_input_i` The path to access the location where the input file/s is/are located. Must be written as many paths as input samples the study has (i=1,2,3...).
-* `path_chip_i` The path to access the location where the chip file/s is/are located. Must be written as many paths as chip samples the study has (i=1,2,3...).
-* `path_genome` The path to access the location where the genome file of the organism is located.
-* `path_annotation` The path to access the location where the annotation file of the genome is located.
-* `experiment_name` The name of the folder where the analysis output is contained.
-* `working_directory` The directory where the analysis is carried out. 
-* `installation_directory` The directory where all the executable files are archived.
-* `number_chip` The number of chip samples the study has.
-* `number_input` The number of input samples the study has.
-* `tf_em` The type of data used in the analysis. Use “tf” in case of transcription factor or “em” if it is epigenetics marks.
+* `path_input_i:` The path to access the location where the input file/s is/are located. Must be written as many paths as input samples the study has (i=1,2,3...).
+* `path_chip_i:` The path to access the location where the chip file/s is/are located. Must be written as many paths as chip samples the study has (i=1,2,3...).
+* `path_genome:` The path to access the location where the genome file of the organism is located.
+* `path_annotation:` The path to access the location where the annotation file of the genome is located.
+* `experiment_name:` The name of the folder where the analysis output is contained.
+* `working_directory:` The directory where the analysis is carried out. 
+* `installation_directory:` The directory where all the executable files are archived.
+* `number_chip:` The number of chip samples the study has.
+* `number_input:` The number of input samples the study has.
+* `tf_em:` The type of data used in the analysis. Use “tf” in case of transcription factor or “em” if it is epigenetics marks.
 
 
 
 ### Scripts
+
+A detailed summary of the steps followed by each script will be described:
+
+
+
+
+
