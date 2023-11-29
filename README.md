@@ -94,20 +94,26 @@ The processes carried out by each script are explained in the following section:
    - Create the workspace that contains all the input files and where the output would be located.
    - Create the genome index using [bowtie2-build](http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml).
    - Process the samples in parallel by executing it from the queue manager.
-   - Pass the arguments that the sample_proc.sh script needs to be executed.
+   - Passes the arguments needed by the sample_proc.sh script to run.
 
  * **`sample_proc.sh`**
    - Quality analysis of the samples using [fastqc](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/).
    - Map of short reads to the reference genome using [bowtie2](http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml).
    - Transform the SAM format into a binary BAM format, sort the mappings according to their order in the genome and create a BAM index using [samtools](http://www.htslib.org).
-   - Pass the arguments that the callpeaks.sh script needs to be executed.
+   - Passes the arguments needed by the callpeaks.sh script to run.
   
   * **`callpeaks.sh`**
-   - Quality analysis
-
+   - Peak calling usin [masc2 callpeak](https://github.com/macs3-project/MACS)).
+   - Find relevant DNA motifs using [HOMER](http://homer.ucsd.edu/homer/ngs/peakMotifs.html).
+   - Passes the arguments needed by the pipe.R file to be executed.
 
   * **`pipe.R`**
-   - Quality analysis
+   - Data enrichment analysis using [RStudio](https://www.r-project.org).
+   - Definition of promoter region using [ChIPseeker](https://bioconductor.org/packages/release/bioc/html/ChIPseeker.html) and [TxDb.Athaliana.BioMart.plantsmart28](https://bioconductor.org/packages/release/data/annotation/html/TxDb.Athaliana.BioMart.plantsmart28.html) library. 
+   - Peak annotation using [ChIPseeker](https://bioconductor.org/packages/release/bioc/html/ChIPseeker.html) and [TxDb.Athaliana.BioMart.plantsmart28](https://bioconductor.org/packages/release/data/annotation/html/TxDb.Athaliana.BioMart.plantsmart28.html) library.
+   - GO terms enrichment using [clusterProfiler](https://bioconductor.org/packages/release/bioc/html/clusterProfiler.html), [org.At.tair.db](https://bioconductor.org/packages/release/data/annotation/html/org.At.tair.db.html) and [enrichplot](https://bioconductor.org/packages/release/bioc/html/enrichplot.html) library.
+   - KEGG terms enrichment using [clusterProfiler](https://bioconductor.org/packages/release/bioc/html/clusterProfiler.html) and PATHVIEW library.
+    
 
 OUTPUT
 Once all parameters have been specified, the next step is to run the scripts. When CHIPsequeando pipeline is running, the next folders will be created in the output directory:
