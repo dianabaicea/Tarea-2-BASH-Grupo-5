@@ -48,6 +48,9 @@
         <li><a href="#scripts">Scripts</a></li>
       </ul>
     </li>
+    <li>
+      <a href="#3---output">Output</a>
+    </li>
   </ol>
 </details>
   <br />
@@ -80,7 +83,6 @@ The _params.txt_ file is the only one that the user needs to edit according to t
 * `number_input:` The number of input samples the study has.
 * `tf_em:` The type of data used in the analysis. Use “tf” in case of transcription factor or “em” if it is epigenetics marks.
 
-  <br />
 > [!WARNING]
 > * The analysis only accepts compressed sample files (fq.gz extension file). 
 > * It is necessary to write a space bar after each ":" in the _params.txt_ file.
@@ -103,19 +105,54 @@ The processes carried out by each script are explained in the following section:
    - Passes the arguments needed by the callpeaks.sh script to run.
   
   * **`callpeaks.sh`**
-   - Peak calling usin [masc2 callpeak](https://github.com/macs3-project/MACS)).
-   - Find relevant DNA motifs using [HOMER](http://homer.ucsd.edu/homer/ngs/peakMotifs.html).
-   - Passes the arguments needed by the pipe.R file to be executed.
+    - Peak calling usin [masc2 callpeak](https://github.com/macs3-project/MACS).
+    - Find relevant DNA motifs using [HOMER](http://homer.ucsd.edu/homer/ngs/peakMotifs.html).
+    - Passes the arguments needed by the pipe.R file to be executed.
 
   * **`pipe.R`**
-   - Data enrichment analysis using [RStudio](https://www.r-project.org).
-   - Definition of promoter region using [ChIPseeker](https://bioconductor.org/packages/release/bioc/html/ChIPseeker.html) and [TxDb.Athaliana.BioMart.plantsmart28](https://bioconductor.org/packages/release/data/annotation/html/TxDb.Athaliana.BioMart.plantsmart28.html) library. 
-   - Peak annotation using [ChIPseeker](https://bioconductor.org/packages/release/bioc/html/ChIPseeker.html) and [TxDb.Athaliana.BioMart.plantsmart28](https://bioconductor.org/packages/release/data/annotation/html/TxDb.Athaliana.BioMart.plantsmart28.html) library.
-   - GO terms enrichment using [clusterProfiler](https://bioconductor.org/packages/release/bioc/html/clusterProfiler.html), [org.At.tair.db](https://bioconductor.org/packages/release/data/annotation/html/org.At.tair.db.html) and [enrichplot](https://bioconductor.org/packages/release/bioc/html/enrichplot.html) library.
-   - KEGG terms enrichment using [clusterProfiler](https://bioconductor.org/packages/release/bioc/html/clusterProfiler.html) and PATHVIEW library.
-    
+    - Data enrichment analysis using [RStudio](https://www.r-project.org).
+    - Definition of promoter region using [ChIPseeker](https://bioconductor.org/packages/release/bioc/html/ChIPseeker.html) and [TxDb.Athaliana.BioMart.plantsmart28](https://bioconductor.org/packages/release/data/annotation/html/TxDb.Athaliana.BioMart.plantsmart28.html) library. 
+    - Peak annotation using [ChIPseeker](https://bioconductor.org/packages/release/bioc/html/ChIPseeker.html) and [TxDb.Athaliana.BioMart.plantsmart28](https://bioconductor.org/packages/release/data/annotation/html/TxDb.Athaliana.BioMart.plantsmart28.html) library.
+    - GO terms enrichment using [clusterProfiler](https://bioconductor.org/packages/release/bioc/html/clusterProfiler.html), [org.At.tair.db](https://bioconductor.org/packages/release/data/annotation/html/org.At.tair.db.html) and [enrichplot](https://bioconductor.org/packages/release/bioc/html/enrichplot.html) library.
+    - KEGG terms enrichment using [clusterProfiler](https://bioconductor.org/packages/release/bioc/html/clusterProfiler.html) and PATHVIEW library.
+  <br />
+  <br />
+  <br />
 
-OUTPUT
-Once all parameters have been specified, the next step is to run the scripts. When CHIPsequeando pipeline is running, the next folders will be created in the output directory:
-PARA EJECUTAR TODO EL SCRIPT SE INTRODUCE EL COMANDO
+
+## 3 - Output
+Once all parameters have been specified, data analysis can be carried out. The main script is pipe.sh, which only needs _params.txt_ file as an input. As previously explained, the scripts would redirect to each other the arguments needed to execute the process. When the scripts have finished running, a directory with the name established in the experiment_name parameter is created. This directory contains the following subdirectories and files:
+
+ * **`Experiment`**
+   * `annotation` Folder with the annotation.gtf file.
+   * `genome` folder that contains the reference genome (/genome.fa) and all its index files + preparsed (?)
+   * `results`
+     * finalpeak.broadPeak or finalpeak.narrowPeak: files with final peaks information, you will have a .broadPeak, if your processing is on epigenetic marks; and a .narrowPeak file, if it is about a specific transcription factor.
+     * peaks_summits.bed, peaks_peaks.xls and peaks_model.r: files with more peaks information.
+     * homerResults.html and homerResults: both contain unknown motif information, including the logos.
+     * knownResults.html and knownResults: both contain the known motifs information.
+     * TSS_plot.png
+     * pie_plot.png
+     * emap_plot_enrich.png
+     * dot_plot_enrich.png
+     * cnet_plot.png
+     * bar_plot_enrich.png
+     * bar_plot.png
+     * target_genes.txt: file with information of all the genes which are targets of the transcription factor or of the epigenetic marks.
+     * **(en el script sampleproc, dentro del if que dice que si replicas_list.txt son las correctas, meter que borre ese archivo, no hace falta más para el análisis)**
+   * `samples`
+     *  chip: for each chip sample, we have:
+       * chip.fq.gz: the original compressed file of the sample
+       * chip_fastqc.zip and chip_fastqc.html: the results of the sample quality analysis.
+       * chip.bam: the result of mapping the sample against the reference genome.
+       * chip.bam.bai: the chip.bam index.
+     * input: the same structure for each input sample
+ * **input.txt and chip.txt**: files that contain the processing information of the input and chip samples, respectively.
+ * **err_input.txt** and **err_chip.txt** files with the possible error of the input and chip processing, respectively.
+ * **peaks_out.txt** file that contains the peaks processing information.
+ * **peaks_err.txt** file with the possible error of the peaks processing.
+
+> [!NOTE]
+> The folders are represented as `folder`.
+
 
