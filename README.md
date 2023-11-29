@@ -97,10 +97,17 @@ The processes carried out by each script are explained in the following section:
    - Pass the arguments that the sample_proc.sh script needs to be executed.
 
  * **`sample_proc.sh`**
-   - Reference Annotation (`/annotation.gtf`) 
+   - Quality analysis of the samples using [fastqc](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/).
+   - Map of short reads to the reference genome using [bowtie2](http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml).
+   - Transform the SAM format into a binary BAM format, sort the mappings according to their order in the genome and create a BAM index using [samtools](http://www.htslib.org).
+   - Pass the arguments that the callpeaks.sh script needs to be executed.
+  
+  * **`callpeaks.sh`**
+   - Quality analysis
 
 
-
+  * **`pipe.R`**
+   - Quality analysis
 
 OUTPUT
 Once all parameters have been specified, the next step is to run the scripts. When CHIPsequeando pipeline is running, the next folders will be created in the output directory:
