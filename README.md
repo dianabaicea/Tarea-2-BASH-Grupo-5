@@ -38,34 +38,25 @@
   <summary><strong>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#1.-about-the-project">About The Project</a>
+      <a href="#1---about-the-project">About The Project</a>
     </li>
     <li>
-      <a href="#input">Input</a>
+      <a href="#2---input">Input</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#parameters">Parameters</a></li>
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
-
-  <br />
-  <br />
   <br />
 
-## 1. About the project
+## 1 - About The Project
 In this project, we developed an automated process that analyzes a chosen number of ChIP-seq samples of Transcription Factors (TFs) or Epigenetic Marks (EMs) in Arabidopsis thaliana model organisms. The results obtained are a _list of target genes that could be regulated by TFs or EMs, GO and KEGG metabolic pathways enrichment and DNA motifs in the TSS region where the transcription factor is bound_.
 
 The process is based on three bash scripts (_pipe.sh_, _sample_proc.sh_, _callpeaks.sh_) and one R script (_pipe.R_). The parameters needed for its execution must be specified in the _params.txt_ file previously the script is run. In the next paragraph, these parameters are explained to better comprehend its use.
 
-## Input
+## 2 - Input
 ### Parameters
 
 An example of the model file params_file.txt is found ChIPing/my_test/params_file.txt
