@@ -18,12 +18,15 @@
 </div>
 
 Authors:
-* Giles Floriano, Carmen       <a href="mailto:tu@email.com">
+* Giles Floriano, Carmen       <a href="mailto:carmengiles02@gmail.com">
   <img src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/112-gmail_email_mail-512.png" alt="Haz clic para enviar un correo" width="15"/>
 </a> <a href="https://github.com/CarmenGiles">
   <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Haz clic para visitar mi GitHub" width="15"/>
 </a>
+
+
 * Baicea, Diana Andreea
+
 * Rodríguez Ramírez, Lucía
 * Tejero Miranda, Lucía
 * Revilla López, Vicente
