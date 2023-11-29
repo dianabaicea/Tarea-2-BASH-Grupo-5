@@ -1,40 +1,37 @@
 # Project 2 - BASH (Group 5)
 
-[![Authors][contributors-shield]][contributors-url]
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
-
-Authors:
-* Carmen Giles Floriano
-* Diana Andreea Baicea
-* Lucía Rodríguez Ramírez
-* Lucía Tejero Miranda
-* Vicente Revilla López
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="[https://github.com/github_username/repo_name](https://github.com/dianabaicea/Tarea-2-BASH-Grupo-5)">
-    <img src="https://dbarchive.biosciencedbc.jp/data/togo-pic/image/202002_ChIP-seq_positive.png" alt="ChIP-seq" width="150" height="150">
+    <img src="https://dbarchive.biosciencedbc.jp/data/togo-pic/image/202002_ChIP-seq_positive.png" alt="ChIP-seq" width="200" height="200">
   </a>
 
 <h3 align="center">ChIP-seq Analysis using BASH Scripting</h3>
 
   <p align="center">
-    project_description
-    <br />
-    <a href="https://github.com/dianabaicea/Tarea-2-BASH-Grupo-5"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/dianabaicea/Tarea-2-BASH-Grupo-5"><strong>Explore the repository »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+    <br />
   </p>
 </div>
 
+Authors:
+* Giles Floriano, Carmen       <a href="mailto:tu@email.com">
+  <img src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/112-gmail_email_mail-512.png" alt="Haz clic para enviar un correo" width="15"/>
+</a> <a href="https://github.com/CarmenGiles">
+  <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Haz clic para visitar mi GitHub" width="15"/>
+</a>
+* Baicea, Diana Andreea
+* Rodríguez Ramírez, Lucía
+* Tejero Miranda, Lucía
+* Revilla López, Vicente
 
-## 1. Introduction
+
+### TABLA DE CONTENIDO
+
+## 1. About the project
 In this project, we developed an automated process that analyzes a chosen number of ChIP-seq samples of Transcription Factors (TFs) or Epigenetic Marks (EMs) in Arabidopsis thaliana model organisms. The results obtained are a _list of target genes that could be regulated by TFs or EMs, GO and KEGG metabolic pathways enrichment and DNA motifs in the TSS region where the transcription factor is bound_.
 
 The process is based on three bash scripts (_pipe.sh_, _sample_proc.sh_, _callpeaks.sh_) and one R script (_pipe.R_). The parameters needed for its execution must be specified in the _params.txt_ file previously the script is run. In the next paragraph, these parameters are explained to better comprehend its use.
