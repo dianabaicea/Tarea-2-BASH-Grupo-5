@@ -83,7 +83,7 @@ The _params.txt_ file is the only one that the user needs to edit according to t
   <br />
 > [!WARNING]
 > * The analysis only accepts compressed sample files (fq.gz extension file). 
-> * It is neccesary to write a space bar after each ":" in the _params.txt_ file.
+> * It is necessary to write a space bar after each ":" in the _params.txt_ file.
   <br />
 
 ### Scripts
@@ -92,9 +92,11 @@ The processes carried out by each script are explained in the following section:
  * **`pipe.sh`**
    - Load parameters from the _params.txt_ file.
    - Create the workspace that contains all the input files and where the output would be located.
-   - Create the genome index using [bowtie2-build](http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml)
+   - Create the genome index using [bowtie2-build](http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml).
+   - Process the samples in parallel by executing it from the queue manager.
+   - Pass the arguments that the sample_proc.sh script needs to be executed.
 
- * **`experiment_name/annotation`:**
+ * **`sample_proc.sh`**
    - Reference Annotation (`/annotation.gtf`) 
 
 
