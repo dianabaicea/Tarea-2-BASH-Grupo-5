@@ -1,4 +1,7 @@
-# Tarea 2 - BASH (Grupo 5)
+# Project 2 - BASH (Group 5)
+
+[![Authors][contributors-shield]][contributors-url]
+[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
 
 Authors:
 * Carmen Giles Floriano
@@ -7,10 +10,51 @@ Authors:
 * Lucía Tejero Miranda
 * Vicente Revilla López
 
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="[https://github.com/github_username/repo_name](https://github.com/dianabaicea/Tarea-2-BASH-Grupo-5)">
+    <img src="https://dbarchive.biosciencedbc.jp/data/togo-pic/image/202002_ChIP-seq_positive.png" alt="ChIP-seq" width="150" height="150">
+  </a>
+
+<h3 align="center">ChIP-seq Analysis using BASH Scripting</h3>
+
+  <p align="center">
+    project_description
+    <br />
+    <a href="https://github.com/dianabaicea/Tarea-2-BASH-Grupo-5"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    ·
+    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+  </p>
+</div>
+
 
 ## 1. Introduction
-In this work, we developed an automized process that analyzes a given number of ChIP-seq samples of Transcription Factors (TFs) or Epigenetic Marks (EMs) in Arabidopsis thaliana model organisms. The results obtained are a _list of target genes that could be regulated by TFs or EMs, GO and KEGG metabolic pathways enrichment and DNA motifs in TSS region where the transcription factor is bound_.
+In this project, we developed an automated process that analyzes a chosen number of ChIP-seq samples of Transcription Factors (TFs) or Epigenetic Marks (EMs) in Arabidopsis thaliana model organisms. The results obtained are a _list of target genes that could be regulated by TFs or EMs, GO and KEGG metabolic pathways enrichment and DNA motifs in the TSS region where the transcription factor is bound_.
 
-The process is based on three bash scripts (pipe.sh, sample_proc.sh, callpeaks.sh) and one R script (pipe.R). The parameters needed for its execution have to be specified in the params.txt file every time the script is run. In the next paragraph, these parameters are explained for better comprehension of its use.
+The process is based on three bash scripts (_pipe.sh_, _sample_proc.sh_, _callpeaks.sh_) and one R script (_pipe.R_). The parameters needed for its execution must be specified in the _params.txt_ file previously the script is run. In the next paragraph, these parameters are explained to better comprehend its use.
 
-## 2. Parameters
+## 2. Input
+### 2.1. Parameters
+
+An example of the model file params_file.txt is found ChIPing/my_test/params_file.txt
+The params file should contain the following parameters:
+To process ChIP-Seq data run the executable chip_data_process.sh with param_input as unique input. On the folder: param_input you can find the file param_input.txt where it is neccesary to write this parameters:
+
+The _params.txt_ file is the only one that the user needs to edit according to their data to run the entire analysis. An example of the _params.txt_ file can be found in this repository. In the following section, these parameters are explained to better comprehend its use:
+
+* path_input_1: <the path to access into the location where the input file is. Must be written as much paths as input samples the study has>
+* path_chip_1: <the path to access into the location where the chip file is. Must be written as much paths as chip samples the study has>
+* path_genome: <the path to access into the location where the genome file of the organism is>
+* path_annotation: <the directory where the annotation.gtf are located>
+* experiment_name: <name of the folder where the analysis is been taking >
+* working_directory: <the directory where the analysis is carried out  >
+* installation_directory: <the directory where all the executable files are archived>
+* number_chip: <number of chip samples the study have>
+* number_input: <number of input samples the study have>
+* tf_em: <type of data used in the study, use “tf” in case of transcription factor or “em” if it is epigenetics marks>
