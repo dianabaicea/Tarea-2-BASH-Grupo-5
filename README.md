@@ -1,6 +1,5 @@
 # Project 2 - BASH (Group 5)
 
-<!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="[https://github.com/github_username/repo_name](https://github.com/dianabaicea/Tarea-2-BASH-Grupo-5)">
@@ -17,36 +16,17 @@
   </p>
 </div>
 
+
 Authors:
-* Giles Floriano, Carmen   &nbsp;&nbsp;    <a href="mailto:carmengiles02@gmail.com">
-  <img src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/112-gmail_email_mail-512.png" alt="Haz clic para enviar un correo" width="15"/>
-</a> &nbsp; <a href="https://github.com/CarmenGiles">
-  <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Haz clic para visitar mi GitHub" width="15"/>
-</a>
+* Giles Floriano, Carmen   &nbsp;&nbsp;    <a href="mailto:carmengiles02@gmail.com"><img src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/112-gmail_email_mail-512.png" alt="Haz clic para enviar un correo" width="15"/></a> &nbsp; <a href="https://github.com/CarmenGiles"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Haz clic para visitar mi GitHub" width="15"/></a>
 
-* Baicea, Diana Andreea<a href="mailto:diana.baicea@gmail.com">
-  <img src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/112-gmail_email_mail-512.png" alt="Haz clic para enviar un correo" width="15"/>
-</a> &nbsp; <a href="https://github.com/dianabaicea">
-  <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Haz clic para visitar mi GitHub" width="15"/>
-</a>
+* Baicea, Diana Andreea   &nbsp;&nbsp;    <a href="mailto:diana.baicea@gmail.com"><img src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/112-gmail_email_mail-512.png" alt="Haz clic para enviar un correo" width="15"/></a> &nbsp; <a href="https://github.com/dianabaicea"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Haz clic para visitar mi GitHub" width="15"/></a>
 
-* Rodríguez Ramírez, Lucía<a href="mailto:luciarguez20@gmail.com">
-  <img src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/112-gmail_email_mail-512.png" alt="Haz clic para enviar un correo" width="15"/>
-</a> &nbsp; <a href="https://github.com/luciarguez20">
-  <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Haz clic para visitar mi GitHub" width="15"/>
-</a>
+* Rodríguez Ramírez, Lucía   &nbsp;&nbsp;    <a href="mailto:luciarguez20@gmail.com"><img src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/112-gmail_email_mail-512.png" alt="Haz clic para enviar un correo" width="15"/></a> &nbsp; <a href="https://github.com/luciarguez20"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Haz clic para visitar mi GitHub" width="15"/></a>
 
-* Tejero Miranda, Lucía<a href="mailto:luciatejerom@gmail.com">
-  <img src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/112-gmail_email_mail-512.png" alt="Haz clic para enviar un correo" width="15"/>
-</a> &nbsp; <a href="https://github.com/Luciatej">
-  <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Haz clic para visitar mi GitHub" width="15"/>
-</a>
+* Tejero Miranda, Lucía   &nbsp;&nbsp;    <a href="mailto:luciatejerom@gmail.com"><img src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/112-gmail_email_mail-512.png" alt="Haz clic para enviar un correo" width="15"/></a> &nbsp; <a href="https://github.com/Luciatej"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Haz clic para visitar mi GitHub" width="15"/></a>
 
-* Revilla López, Vicente<a href="mailto:vicenterevillalopez4@gmail.com">
-  <img src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/112-gmail_email_mail-512.png" alt="Haz clic para enviar un correo" width="15"/>
-</a> &nbsp; <a href="https://github.com/vicrevlop">
-  <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Haz clic para visitar mi GitHub" width="15"/>
-</a>
+* Revilla López, Vicente   &nbsp;&nbsp;    <a href="mailto:vicenterevillalopez4@gmail.com"><img src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/112-gmail_email_mail-512.png" alt="Haz clic para enviar un correo" width="15"/></a> &nbsp; <a href="https://github.com/vicrevlop"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Haz clic para visitar mi GitHub" width="15"/></a>
 
 
 
