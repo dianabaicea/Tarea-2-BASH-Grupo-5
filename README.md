@@ -17,7 +17,7 @@
 </div>
 
 
-
+<a name="authors"></a>
 **Authors:**
 * Baicea, Diana Andreea   &nbsp;&nbsp;    <a href="mailto:diana.baicea@gmail.com"><img src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/112-gmail_email_mail-512.png" alt="diana.baicea@gmail.com" width="15"/></a> &nbsp; <a href="https://github.com/dianabaicea"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub - dianabaicea" width="15"/></a>
 
@@ -153,5 +153,5 @@ Once all parameters have been specified, data analysis can be carried out. The m
 
 
 ## 4 - Now is your turn
-You can practice this ChIP-seq analysis using the scripts and the samples provided in the [repository](https://github.com/dianabaicea/Tarea-2-BASH-Grupo-5). Also, it is given an example of the results generated in an analysis that could be helpful. In case you have any doubts about the process, please contact the <a href="#authors:">authors</a> of this project.
+You can practice this ChIP-seq analysis using the scripts and the samples provided in the [repository](https://github.com/dianabaicea/Tarea-2-BASH-Grupo-5). Also, it is given an example of the results generated in an analysis that could be helpful. In case you have any doubts about the process, please contact the <a href="#authors">authors</a> of this project.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
