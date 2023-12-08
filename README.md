@@ -138,10 +138,10 @@ Once all parameters have been specified, data analysis can be carried out. The m
      * *..._plot* are several graphic plots containing information about GO and KEGG terms enrichment.
    * `samples`
      *  `chip<i>` for each chip sample the study has (i=1,2,3...), there are:
-         + chip<i>.fq.gz is the original compressed file of the sample.
-         + *chip<i>_fastqc.zip* and *chip<i>_fastqc.html* containing the quality control analysis.
-         + _chip<i>.bam_ containing the result of mapping the sample against the reference genome.
-         + _chip<i>.bam.bai_ containing the chip.bam index.
+         + chip.fq.gz is the original compressed file of the sample.
+         + *chip_fastqc.zip* and *chip_fastqc.html* containing the quality control analysis.
+         + _chip.bam_ containing the result of mapping the sample against the reference genome.
+         + _chip.bam.bai_ containing the chip.bam index.
      * `input<i>` has files that follow the same structure for each input sample (i=1,2,3...) as the ones in the chip folder.
  * **input.txt** and **chip.txt** containing the processing information of the input and chip samples, respectively.
  * **err_input.txt** and **err_chip.txt** containing the possible errors that could have occurred during the input or chip processing, respectively.
@@ -153,8 +153,5 @@ Once all parameters have been specified, data analysis can be carried out. The m
 
 
 ## 4 - Now is your turn
-
-
-
-
-It is given an example of the results generated in an analysis that could be helpful results_folder.
+You can practice this ChIP-seq analysis using the scripts and the samples provided in the [repository](https://github.com/dianabaicea/Tarea-2-BASH-Grupo-5). Also, it is given an example of the results generated in an analysis that could be helpful. In case you have any doubts about the process, please contact the [authors](#Authors:) of this project.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
