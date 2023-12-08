@@ -1,10 +1,10 @@
 # Project 2 - BASH (Group 5)
 
+<a name="readme-top"></a>
+
 <br />
 <div align="center">
-  <a href="[https://github.com/github_username/repo_name](https://github.com/dianabaicea/Tarea-2-BASH-Grupo-5)">
-    <img src="https://dbarchive.biosciencedbc.jp/data/togo-pic/image/202002_ChIP-seq_positive.png" alt="ChIP-seq" width="200" height="200">
-  </a>
+  <img src="https://dbarchive.biosciencedbc.jp/data/togo-pic/image/202002_ChIP-seq_positive.png" alt="ChIP-seq" width="200" height="200">
 
 <h3 align="center">ChIP-seq Analysis using BASH Scripting</h3>
 
@@ -153,5 +153,5 @@ Once all parameters have been specified, data analysis can be carried out. The m
 
 
 ## 4 - Now is your turn
-You can practice this ChIP-seq analysis using the scripts and the samples provided in the [repository](https://github.com/dianabaicea/Tarea-2-BASH-Grupo-5). Also, it is given an example of the results generated in an analysis that could be helpful. In case you have any doubts about the process, please contact the [authors](#Authors:) of this project.
+You can practice this ChIP-seq analysis using the scripts and the samples provided in the [repository](https://github.com/dianabaicea/Tarea-2-BASH-Grupo-5). Also, it is given an example of the results generated in an analysis that could be helpful. In case you have any doubts about the process, please contact the <a href="#authors:">authors</a> of this project.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
