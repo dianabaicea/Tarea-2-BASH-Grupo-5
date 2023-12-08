@@ -115,11 +115,8 @@ The processes carried out by each script are explained in the following section:
     - Definition of promoter region using [ChIPseeker](https://bioconductor.org/packages/release/bioc/html/ChIPseeker.html) and [TxDb.Athaliana.BioMart.plantsmart28](https://bioconductor.org/packages/release/data/annotation/html/TxDb.Athaliana.BioMart.plantsmart28.html) library. 
     - Peak annotation using [ChIPseeker](https://bioconductor.org/packages/release/bioc/html/ChIPseeker.html) and [TxDb.Athaliana.BioMart.plantsmart28](https://bioconductor.org/packages/release/data/annotation/html/TxDb.Athaliana.BioMart.plantsmart28.html) library.
     - GO terms enrichment using [clusterProfiler](https://bioconductor.org/packages/release/bioc/html/clusterProfiler.html), [org.At.tair.db](https://bioconductor.org/packages/release/data/annotation/html/org.At.tair.db.html) and [enrichplot](https://bioconductor.org/packages/release/bioc/html/enrichplot.html) library.
-    - KEGG terms enrichment using [clusterProfiler](https://bioconductor.org/packages/release/bioc/html/clusterProfiler.html) and PATHVIEW library.
+    - KEGG terms enrichment using [clusterProfiler](https://bioconductor.org/packages/release/bioc/html/clusterProfiler.html) and [pathview](https://bioconductor.org/packages/release/bioc/html/pathview.html).
   <br />
-  <br />
-  <br />
-
 
 ## 3 - Output
 Once all parameters have been specified, data analysis can be carried out. The main script is pipe.sh, which only needs _params.txt_ file as an input. As previously explained, the scripts would redirect to each other the arguments needed to execute the process. When the scripts have finished running, a directory with the name established in the experiment_name parameter is created. This directory contains the following subdirectories and files:
@@ -150,7 +147,7 @@ Once all parameters have been specified, data analysis can be carried out. The m
 
 > [!NOTE]
 > The folders are represented as `folder`.
-
+  <br />
 
 ## 4 - Now is your turn
 You can practice this ChIP-seq analysis using the scripts and the samples provided in the [repository](https://github.com/dianabaicea/Tarea-2-BASH-Grupo-5). Also, it is given an example of the results generated in the analysis of those samples. In case you have any doubts about the process, please feel free to contact the <a href="#authors">authors</a> of this project.
