@@ -51,6 +51,9 @@
     <li>
       <a href="#3---output">Output</a>
     </li>
+    <li>
+      <a href="#4---now-is-your-turn">Now is your turn</a>
+    </li>
   </ol>
 </details>
   <br />
@@ -58,11 +61,9 @@
 
 
 ## 1 - About The Project
-In this project, we developed an automated process that analyzes a chosen number of ChIP-seq samples of Transcription Factors (TFs) or Epigenetic Marks (EMs) in Arabidopsis thaliana model organisms. The process is based on three bash scripts (_pipe.sh_, _sample_proc.sh_, _callpeaks.sh_) and one R script (_pipe.R_). The parameters needed for its execution must be specified in the _params.txt_ file previously the script is run. 
+In this project, we developed an automated process that analyzes a chosen number of ChIP-seq samples of Transcription Factors (TFs) or Epigenetic Marks (EMs) in Arabidopsis thaliana model organisms. The process is based on three bash scripts (_pipe.sh_, _sample_proc.sh_, _callpeaks.sh_) and one R script (_pipe.R_). The parameters needed for its execution must be specified in the _params.txt_ file previously the script is run. In the next section, all the input data is explained in more detail.
 
-In the next section, all the input data is explained 
-
-The results obtained are a _list of target genes that could be regulated by TFs or EMs, GO and KEGG metabolic pathways enrichment and DNA motifs in the TSS region where the transcription factor is bound_.
+Among the results obtained, the most important are a list of target genes that could be regulated by TFs or EMs, GO and KEGG metabolic pathways enrichment and DNA motifs in the TSS region where the transcription factor is bound.
   <br />
   <br />
   <br />
@@ -72,8 +73,8 @@ The results obtained are a _list of target genes that could be regulated by TFs 
 ### Parameters
 The _params.txt_ file is the only one that the user needs to edit according to their data to run the entire analysis. An example of the <a href="URL_del_enlace">_params.txt_</a> file can be found in this repository. In the following section, these parameters are explained to better comprehend its correct use:
 
-* `path_input_i:` The path to access the location where the input file/s is/are located. Must be written as many paths as input samples the study has (i=1,2,3...).
-* `path_chip_i:` The path to access the location where the chip file/s is/are located. Must be written as many paths as chip samples the study has (i=1,2,3...).
+* `path_input_<i>:` The path to access the location where the input file/s is/are located. Must be written as many paths as input samples the study has (i=1,2,3...).
+* `path_chip_<i>:` The path to access the location where the chip file/s is/are located. Must be written as many paths as chip samples the study has (i=1,2,3...).
 * `path_genome:` The path to access the location where the genome file of the organism is located.
 * `path_annotation:` The path to access the location where the annotation file of the genome is located.
 * `experiment_name:` The name of the folder where the analysis output is contained.
@@ -124,35 +125,36 @@ The processes carried out by each script are explained in the following section:
 Once all parameters have been specified, data analysis can be carried out. The main script is pipe.sh, which only needs _params.txt_ file as an input. As previously explained, the scripts would redirect to each other the arguments needed to execute the process. When the scripts have finished running, a directory with the name established in the experiment_name parameter is created. This directory contains the following subdirectories and files:
 
  * **`Experiment`**
-   * `annotation` Folder with the annotation.gtf file.
-   * `genome` folder that contains the reference genome (/genome.fa) and all its index files + preparsed (?)
+   * `annotation` containing the annotation.gtf file.
+   * `genome` containing the reference genome (/genome.fa) and all its index files.
    * `results`
-     * finalpeak.broadPeak or finalpeak.narrowPeak: files with final peaks information, you will have a .broadPeak, if your processing is on epigenetic marks; and a .narrowPeak file, if it is about a specific transcription factor.
-     * peaks_summits.bed, peaks_peaks.xls and peaks_model.r: files with more peaks information.
-     * homerResults.html and homerResults: both contain unknown motif information, including the logos.
-     * knownResults.html and knownResults: both contain the known motifs information.
-     * TSS_plot.png
-     * pie_plot.png
-     * emap_plot_enrich.png
-     * dot_plot_enrich.png
-     * cnet_plot.png
-     * bar_plot_enrich.png
-     * bar_plot.png
-     * target_genes.txt: file with information of all the genes which are targets of the transcription factor or of the epigenetic marks.
-     * **(en el script sampleproc, dentro del if que dice que si replicas_list.txt son las correctas, meter que borre ese archivo, no hace falta más para el análisis)**
+     * _finalpeak.narrowPeak_ or _finalpeak.broadPeak_ containing final peak information. A .broadPeak file is obtained by processing epigenetic marks (EM), while a .narrowPeak file is obtained by processing a transcription factor (TF).
+     * _peaks_summits.bed_ containing peak summit locations. This file is needed to find the motifs at the binding sites.
+     * _peaks_peaks.xls_ containing tabular information about called peaks.
+     * _peaks_model.r_ containing an R script for the peak model.
+     * _homerResults.html_ and _homerResults_. Both contain information about de novo motif finding, including the logos.
+     * _knownResults.html_ and _knownResults_. Both contain information about known motif finding.
+     * _target_genes.txt_ containing information about all the target genes of the transcription factor or the epigenetic marks.
+     * *..._plot* are several graphic plots containing information about GO and KEGG terms enrichment.
    * `samples`
-     *  chip: for each chip sample, we have:
-       * chip.fq.gz: the original compressed file of the sample
-       * chip_fastqc.zip and chip_fastqc.html: the results of the sample quality analysis.
-       * chip.bam: the result of mapping the sample against the reference genome.
-       * chip.bam.bai: the chip.bam index.
-     * input: the same structure for each input sample
- * **input.txt and chip.txt**: files that contain the processing information of the input and chip samples, respectively.
- * **err_input.txt** and **err_chip.txt** files with the possible error of the input and chip processing, respectively.
- * **peaks_out.txt** file that contains the peaks processing information.
- * **peaks_err.txt** file with the possible error of the peaks processing.
+     *  `chip<i>` for each chip sample the study has (i=1,2,3...), there are:
+         + chip<i>.fq.gz is the original compressed file of the sample.
+         + *chip<i>_fastqc.zip* and *chip<i>_fastqc.html* containing the quality control analysis.
+         + _chip<i>.bam_ containing the result of mapping the sample against the reference genome.
+         + _chip<i>.bam.bai_ containing the chip.bam index.
+     * `input<i>` has files that follow the same structure for each input sample (i=1,2,3...) as the ones in the chip folder.
+ * **input.txt** and **chip.txt** containing the processing information of the input and chip samples, respectively.
+ * **err_input.txt** and **err_chip.txt** containing the possible errors that could have occurred during the input or chip processing, respectively.
+ * **peaks_out.txt** containing the peaks processing information.
+ * **peaks_err.txt** containing the possible errors that could have occurred during the peak processing.
 
 > [!NOTE]
 > The folders are represented as `folder`.
 
 
+## 4 - Now is your turn
+
+
+
+
+It is given an example of the results generated in an analysis that could be helpful results_folder.
