@@ -153,5 +153,5 @@ Once all parameters have been specified, data analysis can be carried out. The m
 
 
 ## 4 - Now is your turn
-You can practice this ChIP-seq analysis using the scripts and the samples provided in the [repository](https://github.com/dianabaicea/Tarea-2-BASH-Grupo-5). Also, it is given an example of the results generated in an analysis that could be helpful. In case you have any doubts about the process, please contact the <a href="#authors">authors</a> of this project.
+You can practice this ChIP-seq analysis using the scripts and the samples provided in the [repository](https://github.com/dianabaicea/Tarea-2-BASH-Grupo-5). Also, it is given an example of the results generated in the analysis of those samples. In case you have any doubts about the process, please feel free to contact the <a href="#authors">authors</a> of this project.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
