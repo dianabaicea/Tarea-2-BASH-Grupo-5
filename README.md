@@ -106,7 +106,7 @@ The processes carried out by each script are explained in the following section:
    - Pass the arguments needed by the callpeaks.sh script to run.
   
   * **`callpeaks.sh`**
-    - Peak calling usin [masc2 callpeak](https://github.com/macs3-project/MACS).
+    - Peak calling using [masc2 callpeak](https://github.com/macs3-project/MACS).
     - Find relevant DNA motifs using [HOMER](http://homer.ucsd.edu/homer/ngs/peakMotifs.html).
     - Pass the arguments needed by the pipe.R file to be executed.
 
