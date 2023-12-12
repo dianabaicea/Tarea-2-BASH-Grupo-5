@@ -97,18 +97,18 @@ The processes carried out by each script are explained in the following section:
    - Create the workspace that contains all the input files and where the output would be located.
    - Create the genome index using [bowtie2-build](http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml).
    - Process the samples in parallel by executing it from the queue manager.
-   - Passes the arguments needed by the sample_proc.sh script to run.
+   - Pass the arguments needed by the sample_proc.sh script to run.
 
  * **`sample_proc.sh`**
    - Quality analysis of the samples using [fastqc](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/).
    - Map of short reads to the reference genome using [bowtie2](http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml).
    - Transform the SAM format into a binary BAM format, sort the mappings according to their order in the genome and create a BAM index using [samtools](http://www.htslib.org).
-   - Passes the arguments needed by the callpeaks.sh script to run.
+   - Pass the arguments needed by the callpeaks.sh script to run.
   
   * **`callpeaks.sh`**
     - Peak calling usin [masc2 callpeak](https://github.com/macs3-project/MACS).
     - Find relevant DNA motifs using [HOMER](http://homer.ucsd.edu/homer/ngs/peakMotifs.html).
-    - Passes the arguments needed by the pipe.R file to be executed.
+    - Pass the arguments needed by the pipe.R file to be executed.
 
   * **`pipe.R`**
     - Data enrichment analysis using [RStudio](https://www.r-project.org).
