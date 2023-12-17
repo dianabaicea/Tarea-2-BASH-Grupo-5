@@ -1,0 +1,11 @@
+
+path_input_1: /home/bag2023_5/sample_tarea/input1.fq.gz 
+path_chip_1: /home/bag2023_5/sample_tarea/chip1.fq.gz
+path_genome: /home/bag2023_5/sample_tarea/chromosome1.fa
+path_annotation: /home/bag2023_5/sample_tarea/chromosome1.gtf
+experiment_name: tarea_chip_5
+working_directory: /home/bag2023_5/tarea2.2.1
+installation_directory: /home/bag2023_5/tarea2.2.1
+number_chip: 1
+number_input: 1
+tf_em: tf
