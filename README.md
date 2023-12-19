@@ -71,7 +71,7 @@ Among the results obtained, the most important are a list of target genes that c
 
 ## 2 - Input
 ### Parameters
-The _params.txt_ file is the only one that the user needs to edit according to their data to run the entire analysis. An example of the <a href="URL_del_enlace">_params.txt_</a> file can be found in this repository. In the following section, these parameters are explained to better comprehend its correct use:
+The _params.txt_ file is the only one that the user needs to edit according to their data to run the entire analysis. An example of the <a href="https://github.com/dianabaicea/Tarea-2-BASH-Grupo-5/blob/main/params.txt">_params.txt_</a> file can be found in this repository. In the following section, these parameters are explained to better comprehend its correct use:
 
 * `path_input_<i>:` The path to access the location where the input file/s is/are located. Must be written as many paths as input samples the study has (i=1,2,3...).
 * `path_chip_<i>:` The path to access the location where the chip file/s is/are located. Must be written as many paths as chip samples the study has (i=1,2,3...).
