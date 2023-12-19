@@ -1,4 +1,3 @@
-
 path_input_1: /home/bag2023_5/sample_tarea/input1.fq.gz 
 path_chip_1: /home/bag2023_5/sample_tarea/chip1.fq.gz
 path_genome: /home/bag2023_5/sample_tarea/chromosome1.fa
